@@ -48,7 +48,7 @@ Everything else is baked into the image. Applicable upstream variables and their
 | Variable | Value | Description |
 | --- | --- | --- |
 | `PORT` | Railway-injected | Sharry's bind port: the wrapper exports it as `SHARRY_BIND_PORT` on every boot (upstream default is 9090). |
-| `RAILWAY_PUBLIC_DOMAIN` | Railway-generated | The wrapper derives `SHARRY_BASE_URL` (`https://<domain>`) from it on every boot; share links, cookies, and websockets are built from it. |
+| `RAILWAY_PUBLIC_DOMAIN` | Railway-generated | The wrapper derives `SHARRY_BASE_URL` (`https://{domain}`) from it on every boot; share links, cookies, and websockets are built from it. |
 | `SHARRY_BACKEND_JDBC_URL` | `jdbc:h2:/data/sharry;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE` | Embedded H2 file database on the volume, in PostgreSQL compatibility mode (upstream's own default backend). No Postgres/MariaDB service needed. |
 | `SHARRY_BACKEND_AUTH_FIXED_ENABLED` / `USER` | `true` / `admin` | Fixed-auth module on; the fixed user is created as an admin on first login (upstream behavior). |
 | `SHARRY_BACKEND_SIGNUP_MODE` | `closed` | Open registration is off; upstream's shipped default is `open`, which would turn a public URL into an open upload service. |
